@@ -1,0 +1,41 @@
+{
+  "name": "store_application",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+     "start": "nodemon --inspect src/index.js",
+     "beautifull":"lint-staged",
+     "prepare":"husky install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/viet06061999/store_backend.git"
+  },
+  "keywords": [
+    "backend",
+    "nodejs",
+    "ecommerce"
+  ],
+  "author": "vietnb",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/viet06061999/store_backend/issues"
+  },
+  "homepage": "https://github.com/viet06061999/store_backend#readme",
+  "lint-staged":{
+    "src/**/*.{js,json}":"prettier --single-quote --trailing-comma all --tab-width 4 --write \"src/**/*.{js,json,scss}\""
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "mysql": "^2.18.1"
+  },
+  "devDependencies": {
+    "husky": "^7.0.2",
+    "lint-staged": "^11.1.2",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.12",
+    "prettier": "^2.4.1"
+  }
+}
